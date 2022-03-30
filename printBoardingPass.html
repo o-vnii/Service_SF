@@ -1,0 +1,109 @@
+<template>
+    <lightning-card  title="Cartão de embarque" icon-name="standard:account">
+      <div class="slds-p-horizontal_small">
+        <lightning-record-view-form
+            object-api-name={objectApiName}
+            record-id={recordId}>
+  
+          <lightning-layout multiple-rows="true">
+            <lightning-layout-item size="12">
+              <div class="header">
+                ETHO X
+              </div>
+            </lightning-layout-item>
+            <lightning-layout-item size="12">
+              <div class="container">
+                <lightning-layout multiple-rows="true">
+                  <lightning-layout-item size="4">
+                    <div class="destino">
+                      PLU
+                    </div>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="4">
+                    <div class="chevron">
+                      >
+                    </div>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="4">
+                    <div class="destino alg-r">
+                      TER
+                    </div>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="6">
+                    Plutão
+                  </lightning-layout-item>
+                  <lightning-layout-item size="6">
+                    <div class="alg-r">
+                      Terra
+                    </div>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="12">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Localizador</th>
+                          <th>Assento</th>
+                          <th>Portão</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <lightning-output-field 
+                              field-name="Localizador__c"
+                              variant="label-hidden"> 
+                            </lightning-output-field>
+                          </td>
+                          <td>
+                            <lightning-output-field 
+                              field-name="Assento__c"
+                              variant="label-hidden"> 
+                            </lightning-output-field>
+                          </td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="6">
+                    <div class="data">
+                      Data
+                    </div>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="6">
+                    <div class="hora alg-r">
+                      Hora
+                    </div>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="6" >
+                    <div class="dia">
+                      18 NOV
+                    </div>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="6">
+                    <div class="dia alg-r">
+                      20:23
+                    </div>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="12">
+                    <div class="passageiro titulo">
+                      Passageiro
+                    </div> 
+                  </lightning-layout-item>
+                  <lightning-layout-item size="12">
+                    <div class="passageiro nome">
+                      Lucas Valhos
+                    </div> 
+                  </lightning-layout-item>
+                  <lightning-layout-item size="12">
+                    <canvas class="qr"></canvas>
+                  </lightning-layout-item>
+                </lightning-layout>
+              </div>
+            </lightning-layout-item>
+          </lightning-layout>
+  
+        </lightning-record-view-form>
+      </div>
+    </lightning-card>
+  </template>

@@ -1,0 +1,12 @@
+h1 {
+    color: black;
+    font: bold;
+}
+
+.card{
+    background: white;
+    padding: 15px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px 1px rgb(103 101 101 / 38%);
+    margin-bottom: 10px;
+}

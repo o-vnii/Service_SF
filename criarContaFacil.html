@@ -1,0 +1,45 @@
+<template>
+    <lightning-card  title="Contas" icon-name="standard:account">
+        <div class="slds-p-horizontal_small">
+            <lightning-tabset>
+                <lightning-tab label="Contas Recentes">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Tipo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <template for:each={contacts} for:item="contact">
+                                <li key={contact.Id}>
+                                    {contact.Name}, {contact.Title}
+                                </li>
+                                <tr>
+                                    <td>Lucas</td>
+                                    <td>Cliente</td>
+                                </tr>
+                            </template>
+                            
+                        </tbody>
+                    </table>
+                </lightning-tab>
+                <lightning-tab label="Criar Conta">
+                    <lightning-record-edit-form 
+                    object-api-name="Account"
+                    onsuccess={handleSuccess}>
+                        <lightning-messages> </lightning-messages>
+                        <lightning-input-field field-name="Name"> </lightning-input-field>
+                        <lightning-input-field field-name="Type"> </lightning-input-field>
+                        <lightning-button
+                            class="slds-m-top_small"
+                            type="submit"
+                            label="Criar"
+                        >
+                        </lightning-button>
+                    </lightning-record-edit-form>  
+                </lightning-tab>
+            </lightning-tabset>
+        </div>
+    </lightning-card>
+</template>
